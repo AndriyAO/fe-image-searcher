@@ -75,7 +75,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 16px;
+      margin-top: 135px;
     }
   
     .card {
@@ -99,8 +99,8 @@
     }
   
     .card.card-small {
-      height: 16px;
-      width: 168px;
+      height: 201;
+      width: 251px;
     }
   
     .card-container .card:not(.highlight-card) {
@@ -326,20 +326,21 @@
     <h2>Resources</h2>
     <p>Here are some links to help you get started:</p>
 
-    <div *ngIf="images.length">
-        <div *ngFor="let image of images">
-            
-            <img [src]="image.url" [alt]="image.title">
+    <div class="card-container" *ngIf="images.length">
+        <div *ngFor="let image of images" class="card-container">
+            <div class="card card-small">
+              <img [src]="image.url" [alt]="image.title"  width=250 height=200>
+            </div>
         </div>
     </div>
-  
+
     <!-- Next Steps -->
     <h2>Next Steps</h2>
     <p>What do you want to do next with your app?</p>
   
     <input type="hidden" #selection>
   
-    <div class="card-container">
+    <div class="card-container"> 
       <div class="card card-small" (click)="selection.value = 'component'" tabindex="0">
           <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
   
