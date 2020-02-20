@@ -19,4 +19,9 @@ export class ImageService {
   getImages(query) {
     return this.http.get<any>(`${environment.IMAGE_SEARCH_URL}/image?query=${query}`);
   }
+
+  like(imageId) {
+  return this.http.post(`${environment.IMAGE_SEARCH_URL}/image/${imageId}`, {});
+  }
+
 }

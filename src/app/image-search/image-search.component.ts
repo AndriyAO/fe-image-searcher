@@ -30,7 +30,11 @@ export class ImageSearchComponent implements OnInit {
   }
 
   onLike(imageId: string) {
-    console.log(imageId);
+    this.applyLike(imageId);
+    this.imageService.like(imageId).subscribe();
   }
 
+  applyLike(imageId) {
+    this.images.map(item => item.id === imageId ? item.liked = true : item)
+}
 }
