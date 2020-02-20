@@ -1,0 +1,13 @@
+.card-small {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    text-emphasis-color: #ffffff;
+    position:absolute;
+    top: 15px;
+    right: 10px;
+    border-radius: 50%; 
+   }
