@@ -6,7 +6,7 @@ import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class ImageService {
+export class HistoryService {
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(
@@ -14,12 +14,7 @@ export class ImageService {
     public router: Router
   ) { }
 
-  getImages(query) {
-    return this.http.get<any>(`${environment.IMAGE_SEARCH_URL}/image?query=${query}`);
+  getHistory() {
+    return this.http.get(`${environment.IMAGE_SEARCH_URL}/history`);
   }
-
-  like(imageId) {
-  return this.http.post(`${environment.IMAGE_SEARCH_URL}/image/${imageId}`, {});
-  }
-
 }
