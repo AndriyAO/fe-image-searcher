@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start:local":"ng serve --watch=true --proxy-config proxy.local.js",
+    "start:local": "ng serve --watch=true --proxy-config proxy.local.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

@@ -17,9 +17,6 @@ export class ImageService {
   ) { }
 
   getImages(query) {
-    return this.http.get<any>(`${environment.IMAGE_SEARCH_URL}/image?query=${query}`)
-      .subscribe((res: any) => {
-        console.log(res);
-      })
+    return this.http.get<any>(`${environment.IMAGE_SEARCH_URL}/image?query=${query}`);
   }
 }

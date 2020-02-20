@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  IMAGE_SEARCH_URL: '/api'
+  IMAGE_SEARCH_URL: 'https://1023b4af.ngrok.io/api'
 };
 
 /*
