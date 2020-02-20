@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ImageService } from './image.service'
+import { from } from 'rxjs';
 @Component({
   selector: 'app-image-search',
   templateUrl: './image-search.component.html',
@@ -7,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImageSearchComponent implements OnInit {
   images = [];
-  constructor() { }
+  constructor(private imageService: ImageService) { }
 
   ngOnInit(): void {
   }
 
-  onClick() {
+  onGetImage() {
+    console.log(this.imageService)
+    this.imageService.getImages('tea');
     this.images = [
       {
           "id": "Wn74RUT0vjnoU98Hnt",
@@ -36,6 +39,10 @@ export class ImageSearchComponent implements OnInit {
           "liked": false
       }
   ];
+  }
+
+  onLike(imageId: string) {
+    console.log(imageId);
   }
 
 }
