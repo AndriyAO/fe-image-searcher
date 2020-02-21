@@ -7,16 +7,17 @@ import { HistoryService } from './history.service';
   styleUrls: ['./history.component.css']
 })
 export class HistoryComponent implements OnInit {
-  history = [];
+  history = ['asdasd', 'asdasd','asdasd', 'asdasd', 'asdasd', 'asdasd'];
   constructor(
     private historyService: HistoryService
   ) { }
 
   ngOnInit(): void {
     this.historyService.getHistory()
-    .subscribe( res => {
-      if (res.data.length > 0) 
-        history = res.data;
+    .subscribe((res: any) => {
+      if (res.length > 0) {
+        this.history = res;
+      }
     })
   }
 

@@ -1,1 +1,17 @@
-<p>history works!</p>
+<div class="toolbar" role="banner">
+    <div class="card">
+        <a routerLink='/search' routerLinkActive="active">Search</a>
+    </div>
+</div>
+<div class="content">
+    <div class="card">
+        <h2>History</h2>
+    </div>
+    <div class="card-container" *ngIf="history.length">
+        <div *ngFor="let item of history" class="card-container">
+            <div class="card">
+                {{item.query}}
+            </div>
+        </div>
+    </div>
+</div>
